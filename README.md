@@ -13,4 +13,4 @@
 
 7. Now my Katalon project is opened in your Katalon studio
 
-8. Click Test Cases to view my tests and you can now run them in your Katalon Studio
+8. Open Scipts/Tests to view my tests and you can now run them in your Katalon Studio. Enjoy! :D
