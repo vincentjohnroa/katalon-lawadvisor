@@ -29,7 +29,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
 
 public class ElementsCustomKeywords {
-	
+
 	@Keyword
 	def inputDetails(String username, String email, String cadd, String padd) {
 		String inputUsernameField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Full Name_userName'
@@ -55,7 +55,7 @@ public class ElementsCustomKeywords {
 		WebUI.verifyElementText(findTestObject(verifyCurrentAddress), "Current Address :"+cadd+"")
 		WebUI.verifyElementText(findTestObject(verifyPermanentAddress), "Permananet Address :"+padd+"")
 	}
-	
+
 	@Keyword
 	def tickCheckboxes(String a,b,c,d,e) {
 		String tickCommands = "Object Repository/Elements_Test2_objects/Page_ToolsQA/"+a+"_checkbox"
@@ -70,7 +70,6 @@ public class ElementsCustomKeywords {
 		WebUI.click(findTestObject(tickClassified))
 		WebUI.click(findTestObject(tickGeneral))
 		WebUI.click(findTestObject(tickExcel))
-		
 	}
 
 	@Keyword
