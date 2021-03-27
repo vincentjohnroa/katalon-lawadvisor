@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_Permananet Address sjdm bulacan</name>
+   <name>p_Permananet Address_Container</name>
    <tag></tag>
    <elementGuidId>a29669b8-c6b0-4a1b-a96f-c4b54a2f0b0e</elementGuidId>
    <selectorCollection>

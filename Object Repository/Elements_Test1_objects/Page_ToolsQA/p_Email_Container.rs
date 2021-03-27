@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>p_Emailabcgmail.com</name>
+   <name>p_Email_Container</name>
    <tag></tag>
    <elementGuidId>35726be0-909c-4041-8421-0983e0e87def</elementGuidId>
    <selectorCollection>

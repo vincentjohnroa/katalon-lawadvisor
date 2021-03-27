@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>textarea_Permanent Address_permanentAddress</name>
+   <name>textarea_Permanent Address</name>
    <tag></tag>
    <elementGuidId>74929579-e604-4030-af4b-2e1701b61db9</elementGuidId>
    <selectorCollection>

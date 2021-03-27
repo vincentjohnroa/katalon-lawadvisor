@@ -32,10 +32,10 @@ public class ElementsCustomKeywords {
 
 	@Keyword
 	def inputDetails(String username, String email, String cadd, String padd) {
-		String inputUsernameField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Full Name_userName'
-		String inputEmailField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Email_userEmail'
-		String inputCurrentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Current Address_currentAddress'
-		String inputPermanentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Permanent Address_permanentAddress'
+		String inputUsernameField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Username_Field'
+		String inputEmailField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Email_Field'
+		String inputCurrentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Current Address'
+		String inputPermanentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Permanent Address'
 
 		WebUI.setText(findTestObject(inputUsernameField), username)
 		WebUI.setText(findTestObject(inputEmailField), email)
@@ -45,10 +45,10 @@ public class ElementsCustomKeywords {
 
 	@Keyword
 	def validateSubmittedDetails(String username, String email, String cadd, String padd) {
-		String verifyUsernameDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_NameVincent John Roa'
-		String verifyEmailDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Emailabcgmail.com'
-		String verifyCurrentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Current Address sjdm bulacan'
-		String verifyPermanentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Permananet Address sjdm bulacan'
+		String verifyUsernameDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Name_Container'
+		String verifyEmailDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Email_Container'
+		String verifyCurrentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Current Address_Container'
+		String verifyPermanentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Permananet Address_Container'
 
 		WebUI.verifyElementText(findTestObject(verifyUsernameDetails), "Name:"+username+"")
 		WebUI.verifyElementText(findTestObject(verifyEmailDetails), "Email:"+email+"")

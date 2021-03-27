@@ -21,7 +21,7 @@ CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
 
-WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/li_Text Box'))
+WebUI.click(findTestObject('Elements_Test1_objects/Page_ToolsQA/TextBox_button'))
 
 //Submit details
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.inputDetails'('Vincent John Roa', 'abc@gmail.com', 'sjdm bulacan', 
