@@ -68,7 +68,7 @@ public class ElementsCustomKeywords {
 	}
 
 	@Keyword
-	def updateAldenRecord(String lastName,age,salary) {
+	def updateAndValidateAldenRecord(String lastName,age,salary) {
 		KeywordLogger log = new KeywordLogger()
 		//Get old records for comparison
 		String oldLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
@@ -119,4 +119,23 @@ public class ElementsCustomKeywords {
 		}
 		
 	}
+	
+	@Keyword
+	def verifyResponseCodes(String x) {
+		KeywordLogger log = new KeywordLogger()
+		Thread.sleep(3000)
+		
+		String response = WebUI.getText(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/link_Response_Container'))
+		
+		if (response.contains(x)) {
+			log.logInfo("Response code is "+x+"")
+		} else {
+			KeywordUtil.markFailed("Incorrect response code" + response)
+		}
+		
+		
+	}
+	
+	
+	
 }
