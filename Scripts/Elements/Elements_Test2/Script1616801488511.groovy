@@ -16,24 +16,32 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
 
-WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/li_Text Box'))
+WebUI.click(findTestObject('Elements_Test2_objects/Page_ToolsQA/Checkbox_button'))
 
-//Submit details
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.inputDetails'('Vincent John Roa', 'abc@gmail.com', 'sjdm bulacan', 
-    'sjdm bulacan')
+WebUI.click(findTestObject('Elements_Test2_objects/Page_ToolsQA/ExpandAll_button'))
 
-WebUI.scrollToPosition(0, 500)
 
-WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/button_Submit'))
+//Ticking of checkboxes
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.tickCheckboxes'(
+	'Commands', 
+	'Veu', 
+	'Classified',
+	'General',
+	'Excel')
 
-//Validations of submitted details
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.validateSubmittedDetails'('Vincent John Roa', 'abc@gmail.com', 
-    'sjdm bulacan', 'sjdm bulacan')
+
+//Validation of selected checkboxes
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.validateResultFromCheckboxes'(
+	"commands",
+	"veu",
+	"classified",
+	"general",
+	"excelFile")
 
 WebUI.closeBrowser()
-
