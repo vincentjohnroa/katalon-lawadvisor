@@ -1,32 +1,12 @@
 package sample.custom.keywords
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
 
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-
-import internal.GlobalVariable
-
-
-import org.openqa.selenium.JavascriptExecutor
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
-
-import com.kms.katalon.core.webui.driver.DriverFactory
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import org.apache.commons.lang.RandomStringUtils
 
 public class ElementsCustomKeywords {
 
@@ -86,7 +66,57 @@ public class ElementsCustomKeywords {
 		WebUI.verifyElementText(findTestObject(verifyGeneral), gen)
 		WebUI.verifyElementText(findTestObject(verifyExcel), ex)
 	}
+
+	@Keyword
+	def updateAldenRecord(String lastName,age,salary) {
+		KeywordLogger log = new KeywordLogger()
+		//Get old records for comparison
+		String oldLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
+		String oldAge = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
+		String oldSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
+
+		//Edit/input updated details
+		WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/edit_Pencil_Icon'))
+		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'))
+		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), lastName)
+		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'))
+		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), age)
+		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'))
+		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), salary)
+		
+		//Submit updated details
+		WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
+		
+		//Validation/comparison of updated details
+		String newLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
+		String newAge = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
+		String newSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))		
+		
+		if(oldLastName != newLastName && oldAge != newAge && oldSalary != newSalary) {
+			log.logInfo("Updated details successfully!")
+		} else {
+			KeywordUtil.markFailed("Unable to update accordingly!")
+		}
+	}
+	
+	@Keyword
+	def addNewTableRecords(int numOfRecords) {
+		for (int i = 0; i < numOfRecords; i++) {
+			String charset = (("abcdefghijklmnopqrstuvwxyz"))
+			String randomString = RandomStringUtils.random(5, charset.toCharArray())
+			
+			WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/add_NewRecord_Button'))
+			
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/firstname_Input_Field'), randomString)
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), randomString)
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/email_Input_Field'), randomString + "@gmail.com")
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), "20")
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), "20000")
+			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/department_Input_Field'), "Science" + randomString)
+			
+			WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
+			
+		}
+		
+	}
 }
-
-
-

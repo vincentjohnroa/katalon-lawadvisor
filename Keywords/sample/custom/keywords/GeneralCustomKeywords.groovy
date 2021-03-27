@@ -43,9 +43,10 @@ class GeneralCustomKeywords {
 	@Keyword
 	def openDemoQa() {
 		WebUI.openBrowser('')
+		WebUI.maximizeWindow()
 		WebUI.navigateToUrl('https://demoqa.com/')
 	}
-	
+
 	@Keyword
 	def viewElementsScreen() {
 		WebUI.scrollToPosition(0, 300)
