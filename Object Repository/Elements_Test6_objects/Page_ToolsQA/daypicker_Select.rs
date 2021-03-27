@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>chooseFile_Button</name>
+   <name>daypicker_Select</name>
    <tag></tag>
-   <elementGuidId>5db15dbd-48f4-4e6d-babe-6609e085936e</elementGuidId>
+   <elementGuidId>586a29ca-1ec9-436e-bad7-87db16f3df3d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#uploadFile</value>
+         <value>.react-datepicker__day.react-datepicker__day--012</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

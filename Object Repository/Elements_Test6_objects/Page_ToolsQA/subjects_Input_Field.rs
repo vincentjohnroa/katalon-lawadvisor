@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>chooseFile_Button</name>
+   <name>subjects_Input_Field</name>
    <tag></tag>
-   <elementGuidId>5db15dbd-48f4-4e6d-babe-6609e085936e</elementGuidId>
+   <elementGuidId>81b34278-52e1-4783-97ff-39c60a6d81c6</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;subjectsContainer&quot;]/div/div[1]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
-         <value>#uploadFile</value>
+         <value>input#subjectsInput</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

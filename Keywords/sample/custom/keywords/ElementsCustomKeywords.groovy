@@ -15,7 +15,7 @@ import java.io.IOException;
 public class ElementsCustomKeywords {
 
 	@Keyword
-	def inputDetails(String username, String email, String cadd, String padd) {
+	def inputDetails(String username, email, cadd, padd) {
 		String inputUsernameField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Username_Field'
 		String inputEmailField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Email_Field'
 		String inputCurrentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Current Address'
@@ -28,7 +28,7 @@ public class ElementsCustomKeywords {
 	}
 
 	@Keyword
-	def validateSubmittedDetails(String username, String email, String cadd, String padd) {
+	def validateSubmittedDetails(String username, email, cadd, padd) {
 		String verifyUsernameDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Name_Container'
 		String verifyEmailDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Email_Container'
 		String verifyCurrentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Current Address_Container'
@@ -57,7 +57,7 @@ public class ElementsCustomKeywords {
 	}
 
 	@Keyword
-	def validateResultFromCheckboxes(String com, String v, String classif, String gen, String ex) {
+	def validateResultFromCheckboxes(String com, v, classif, gen, ex) {
 		String verifyCommands = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultCommands_container'
 		String verifyVeu = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultVeu_container'
 		String verifyClassified = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultClassified_container'
@@ -87,62 +87,62 @@ public class ElementsCustomKeywords {
 		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), age)
 		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'))
 		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), salary)
-		
+
 		//Submit updated details
 		WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
-		
+
 		//Validation/comparison of updated details
 		String newLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
 		String newAge = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
-		String newSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))		
-		
+		String newSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
+
 		if(oldLastName != newLastName && oldAge != newAge && oldSalary != newSalary) {
 			log.logInfo("Updated details successfully!")
 		} else {
 			KeywordUtil.markFailed("Unable to update accordingly!")
 		}
 	}
-	
+
 	@Keyword
 	def addNewTableRecords(int numOfRecords) {
 		for (int i = 0; i < numOfRecords; i++) {
 			String charset = (("abcdefghijklmnopqrstuvwxyz"))
 			String randomString = RandomStringUtils.random(5, charset.toCharArray())
-			
+
 			WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/add_NewRecord_Button'))
-			
+
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/firstname_Input_Field'), randomString)
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), randomString)
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/email_Input_Field'), randomString + "@gmail.com")
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), "20")
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), "20000")
 			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/department_Input_Field'), "Science" + randomString)
-			
+
 			WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
-			
+
 		}
-		
+
 	}
-	
+
 	@Keyword
 	def verifyResponseCodes(String x) {
 		KeywordLogger log = new KeywordLogger()
 		Thread.sleep(3000)
-		
+
 		String response = WebUI.getText(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/link_Response_Container'))
-		
+
 		if (response.contains(x)) {
 			log.logInfo("Response code is "+x+"")
 		} else {
 			KeywordUtil.markFailed("Incorrect response code" + response)
-		}	
+		}
 	}
-	
+
 	@Keyword
 	def uploadFile() {
 		WebUI.uploadFile(findTestObject('Object Repository/Elements_Test5_objects/Page_ToolsQA/chooseFile_Button'), 'C:\\Users\\wahu\\Desktop\\sampleFile.jpg')
 	}
-	
+
 	@Keyword
 	def downloadFile() {
 		WebUI.click(findTestObject('Object Repository/Elements_Test5_objects/Page_ToolsQA/download_Button'))
@@ -150,8 +150,8 @@ public class ElementsCustomKeywords {
 		File filename = new File('C:\\Users\\wahu\\Downloads\\sampleFile.jpeg')
 		filename.delete();
 	}
-	
 
-	
-	
+
+
+
 }

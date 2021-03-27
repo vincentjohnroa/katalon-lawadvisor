@@ -49,5 +49,3 @@ WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQ
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.verifyResponseCodes'("404")
 
 WebUI.closeBrowser() 
-
-//WORK IN PROGRESS

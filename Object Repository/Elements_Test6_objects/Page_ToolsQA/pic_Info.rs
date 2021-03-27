@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>chooseFile_Button</name>
+   <name>pic_Info</name>
    <tag></tag>
-   <elementGuidId>5db15dbd-48f4-4e6d-babe-6609e085936e</elementGuidId>
+   <elementGuidId>43b5e35d-c3fd-4ff7-8085-bb21215d3c23</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#uploadFile</value>
+         <value>body > div.fade.modal.show table > tbody > tr:nth-child(8) > td:nth-child(2)</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

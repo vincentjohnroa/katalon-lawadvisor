@@ -19,14 +19,20 @@ import org.openqa.selenium.Keys as Keys
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
-CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
+CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewFormsScreen'()
 
-WebUI.scrollToPosition(0, 500)
+CustomKeywords.'sample.custom.keywords.FormsCustomKeywords.inputDetailsPracticeForm'(
+	"Matt", 
+	"Nguyen", 
+	"mn@gmail.com", 
+	"0987654321",)
 
-WebUI.click(findTestObject('Object Repository/Elements_Test5_objects/Page_ToolsQA/uploadAndDownload_Button'))
+CustomKeywords.'sample.custom.keywords.FormsCustomKeywords.validateSubmittedDetailsInForm'(
+	"Matt Nguyen",
+	"mn@gmail.com",
+	"Other",
+	"0987654321",
+	"12 August,1985",
+	"sampleFile.jpg")
 
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.uploadFile'()
-
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.downloadFile'()
-	
 WebUI.closeBrowser()

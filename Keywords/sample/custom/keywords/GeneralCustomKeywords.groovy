@@ -53,19 +53,10 @@ class GeneralCustomKeywords {
 		WebUI.click(findTestObject('Elements_Test1_objects/Page_ToolsQA/Elements_button'))
 	}
 
-
-
 	@Keyword
-	def clickElement(TestObject to) {
-		try {
-			WebElement element = WebUiBuiltInKeywords.findWebElement(to);
-			KeywordUtil.logInfo("Clicking element")
-			element.click()
-			KeywordUtil.markPassed("Element has been clicked")
-		} catch (WebElementNotFoundException e) {
-			KeywordUtil.markFailed("Element not found")
-		} catch (Exception e) {
-			KeywordUtil.markFailed("Fail to click on element")
-		}
+	def viewFormsScreen() {
+		WebUI.scrollToPosition(0, 300)
+		WebUI.click(findTestObject('Object Repository/Elements_Test6_objects/Page_ToolsQA/Forms_button'))
+		WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
 	}
 }

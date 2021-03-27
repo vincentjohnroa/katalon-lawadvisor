@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>chooseFile_Button</name>
+   <name>monthpicker_Select</name>
    <tag></tag>
-   <elementGuidId>5db15dbd-48f4-4e6d-babe-6609e085936e</elementGuidId>
+   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#uploadFile</value>
+         <value>select.react-datepicker__month-select</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

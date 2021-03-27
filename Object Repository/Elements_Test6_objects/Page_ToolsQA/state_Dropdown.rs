@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>chooseFile_Button</name>
+   <name>state_Dropdown</name>
    <tag></tag>
-   <elementGuidId>5db15dbd-48f4-4e6d-babe-6609e085936e</elementGuidId>
+   <elementGuidId>2e914ea7-9d4c-417c-9bc8-864169d300da</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#uploadFile</value>
+         <value>#state > div > div.css-1wy0on6 > div
+
+
+</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>
