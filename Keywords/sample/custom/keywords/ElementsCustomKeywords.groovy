@@ -7,6 +7,10 @@ import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import org.apache.commons.lang.RandomStringUtils
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class ElementsCustomKeywords {
 
@@ -131,11 +135,23 @@ public class ElementsCustomKeywords {
 			log.logInfo("Response code is "+x+"")
 		} else {
 			KeywordUtil.markFailed("Incorrect response code" + response)
-		}
-		
-		
+		}	
 	}
 	
+	@Keyword
+	def uploadFile() {
+		WebUI.uploadFile(findTestObject('Object Repository/Elements_Test5_objects/Page_ToolsQA/chooseFile_Button'), 'C:\\Users\\wahu\\Desktop\\sampleFile.jpg')
+	}
+	
+	@Keyword
+	def downloadFile() {
+		WebUI.click(findTestObject('Object Repository/Elements_Test5_objects/Page_ToolsQA/download_Button'))
+		Thread.sleep(5000)
+		File filename = new File('C:\\Users\\wahu\\Downloads\\sampleFile.jpeg')
+		filename.delete();
+	}
+	
+
 	
 	
 }
