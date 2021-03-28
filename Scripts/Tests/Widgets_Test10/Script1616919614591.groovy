@@ -21,10 +21,14 @@ CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewWidgetsScreen'()
 
-WebUI.scrollToPosition(0, 500)
+WebUI.scrollToPosition(0, 700)
 
-WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/datePicker_Button'))
+WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectMenu_Button'))
 
-CustomKeywords.'sample.custom.keywords.WidgetsCustomKeywords.widgetsDatePicker'()
+CustomKeywords.'sample.custom.keywords.WidgetsCustomKeywords.selectMenu'(
+	"Another root option",
+	"Other",
+	"Black",
+	"Blue")
 
 WebUI.closeBrowser()

@@ -58,9 +58,31 @@ public class WidgetsCustomKeywords {
 	def moveSlider(int val){
 		WebDriver driver = DriverFactory.getWebDriver()
 		WebElement slider = driver.findElement(By.xpath("//input[@type='range']"));
-		
+
 		for(int i=1; i<=val; i++) {
 			slider.sendKeys(Keys.ARROW_RIGHT);
 		}
+	}
+
+	@Keyword
+	def selectMenu(String val, sone, c1, c2) {
+		Robot rb = new Robot()
+		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectValue_Dropdown'))
+		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectValue_Input'), val)
+		rb.keyPress(KeyEvent.VK_ENTER)
+		
+		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectOne_Dropdown'))
+		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectOne_Input'), sone)
+		rb.keyPress(KeyEvent.VK_ENTER)
+		
+		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/oldSelect_Dropdown'))
+		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/oldViolet'))
+		
+		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Dropdown'))
+		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Input'), c1)
+		rb.keyPress(KeyEvent.VK_ENTER)
+		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Input'), c2)
+		rb.keyPress(KeyEvent.VK_ENTER)
+
 	}
 }

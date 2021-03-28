@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>state_Dropdown</name>
+   <name>selectOne_Input</name>
    <tag></tag>
-   <elementGuidId>2e914ea7-9d4c-417c-9bc8-864169d300da</elementGuidId>
+   <elementGuidId>65d6c9e8-3350-42f5-a7e7-c0de7b6642bb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#state > div > div.css-1wy0on6 > div
-
-
-</value>
+         <value>input#react-select-3-input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

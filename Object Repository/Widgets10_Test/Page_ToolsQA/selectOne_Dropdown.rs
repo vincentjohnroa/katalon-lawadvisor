@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>state_Dropdown</name>
+   <name>selectOne_Dropdown</name>
    <tag></tag>
-   <elementGuidId>2e914ea7-9d4c-417c-9bc8-864169d300da</elementGuidId>
+   <elementGuidId>0cc448f0-59db-4e4c-bbb8-c1d8fb5a23fb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#state > div > div.css-1wy0on6 > div
-
-
-</value>
+         <value>#selectOne > div > div.css-1wy0on6 > div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>
