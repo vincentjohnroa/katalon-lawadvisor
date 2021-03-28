@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
@@ -53,3 +54,4 @@ WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQ
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.verifyResponseCodes'("404")
 
 WebUI.closeBrowser() 
+

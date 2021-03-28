@@ -27,22 +27,22 @@ import org.openqa.selenium.Keys as Keys
 
 import internal.GlobalVariable
 
+
 public class WidgetsCustomKeywords {
 
 	@Keyword
 	def widgetsDatePicker() {
-		Robot rb = new Robot()
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/datePicker_Input'))
-		WebUI.selectOptionByValue(findTestObject('Forms_Test6_objects/Page_ToolsQA/monthpicker_Select'), "9", false)
-		WebUI.selectOptionByValue(findTestObject('Forms_Test6_objects/Page_ToolsQA/yearpicker_Select'), "1991", false)
+		WebUI.selectOptionByValue(findTestObject('Object Repository/Forms_Test6_objects/Page_ToolsQA/monthpicker_Select'), "9", false)
+		WebUI.selectOptionByValue(findTestObject('Object Repository/Forms_Test6_objects/Page_ToolsQA/yearpicker_Select'), "1991", false)
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/dayPickerWidgets_Select'))
 
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/dateAndTimePicker_Input'))
 
-		WebUI.click(findTestObject('Widgets_Test8/Page_ToolsQA/monthWidgetsPicker_Dropdown'))
+		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/monthWidgetsPicker_Dropdown'))
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/monthWidgetsPicker_Select'))
 
-		WebUI.click(findTestObject('Widgets_Test8/Page_ToolsQA/yearWidgetsPicker_Dropdown'))
+		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/yearWidgetsPicker_Dropdown'))
 
 		for (int i = 0; i < 30; i++) {
 			WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/yearDownSelect_Button'))
@@ -67,22 +67,23 @@ public class WidgetsCustomKeywords {
 	@Keyword
 	def selectMenu(String val, sone, c1, c2) {
 		Robot rb = new Robot()
+
 		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectValue_Dropdown'))
 		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectValue_Input'), val)
 		rb.keyPress(KeyEvent.VK_ENTER)
-		
+
 		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectOne_Dropdown'))
 		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/selectOne_Input'), sone)
 		rb.keyPress(KeyEvent.VK_ENTER)
-		
+
 		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/oldSelect_Dropdown'))
 		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/oldViolet'))
-		
+
 		WebUI.click(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Dropdown'))
 		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Input'), c1)
 		rb.keyPress(KeyEvent.VK_ENTER)
 		WebUI.setText(findTestObject('Object Repository/Widgets10_Test/Page_ToolsQA/multiSelect_Input'), c2)
 		rb.keyPress(KeyEvent.VK_ENTER)
-
 	}
 }
+

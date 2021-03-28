@@ -24,6 +24,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 import internal.GlobalVariable
 
+
 public class AFWCustomKeywords {
 	KeywordLogger log = new KeywordLogger()
 
@@ -39,7 +40,7 @@ public class AFWCustomKeywords {
 			KeywordUtil.markFailed("Incorrect url assertion!" + url)
 		}
 
-		WebUI.verifyElementText(findTestObject('AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
+		WebUI.verifyElementText(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
 
 		WebUI.closeWindowIndex(1)
 	}
@@ -58,7 +59,7 @@ public class AFWCustomKeywords {
 			KeywordUtil.markFailed("Incorrect url assertion!" + url)
 		}
 
-		WebUI.verifyElementText(findTestObject('AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
+		WebUI.verifyElementText(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
 		WebUI.closeWindowIndex(1)
 	}
 

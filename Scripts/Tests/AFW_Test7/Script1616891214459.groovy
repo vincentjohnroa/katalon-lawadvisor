@@ -20,6 +20,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper
 import org.openqa.selenium.WebElement
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewAlertsFrameWindowsScreen'()
@@ -39,3 +40,4 @@ CustomKeywords.'sample.custom.keywords.AFWCustomKeywords.openNewWindowAndValidat
 CustomKeywords.'sample.custom.keywords.AFWCustomKeywords.openNewWindowMessageAndValidatePresentWindow'()
 
 WebUI.closeBrowser()
+

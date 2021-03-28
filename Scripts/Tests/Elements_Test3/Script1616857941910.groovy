@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
@@ -33,3 +34,4 @@ CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.updateAndValidateA
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.addNewTableRecords'(4)
 
 WebUI.closeBrowser()
+

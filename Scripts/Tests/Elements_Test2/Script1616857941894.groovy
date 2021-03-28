@@ -18,16 +18,15 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
 
-WebUI.click(findTestObject('Elements_Test2_objects/Page_ToolsQA/Checkbox_button'))
+WebUI.click(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/Checkbox_button'))
 
-WebUI.click(findTestObject('Elements_Test2_objects/Page_ToolsQA/ExpandAll_button'))
+WebUI.click(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/ExpandAll_button'))
 
-
-//Ticking of checkboxes
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.tickCheckboxes'(
 	'Commands', 
 	'Veu', 
@@ -35,8 +34,6 @@ CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.tickCheckboxes'(
 	'General',
 	'Excel')
 
-
-//Validation of selected checkboxes
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.validateResultFromCheckboxes'(
 	"commands",
 	"veu",

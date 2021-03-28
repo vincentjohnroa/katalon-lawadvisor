@@ -22,31 +22,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 
 
 public class ElementsCustomKeywords {
+	KeywordLogger log = new KeywordLogger()
 
 	@Keyword
-	def inputDetails(String username, email, cadd, padd) {
-		String inputUsernameField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Username_Field'
-		String inputEmailField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Email_Field'
-		String inputCurrentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Current Address'
-		String inputPermanentAddressField = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Permanent Address'
-
-		WebUI.setText(findTestObject(inputUsernameField), username)
-		WebUI.setText(findTestObject(inputEmailField), email)
-		WebUI.setText(findTestObject(inputCurrentAddressField), cadd)
-		WebUI.setText(findTestObject(inputPermanentAddressField), padd)
+	def submitDetails(String username, email, cadd, padd) {
+		WebUI.setText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Username_Field'), username)
+		WebUI.setText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/input_Email_Field'), email)
+		WebUI.setText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Current Address'), cadd)
+		WebUI.setText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/textarea_Permanent Address'), padd)
 	}
 
 	@Keyword
 	def validateSubmittedDetails(String username, email, cadd, padd) {
-		String verifyUsernameDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Name_Container'
-		String verifyEmailDetails = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Email_Container'
-		String verifyCurrentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Current Address_Container'
-		String verifyPermanentAddress = 'Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Permananet Address_Container'
-
-		WebUI.verifyElementText(findTestObject(verifyUsernameDetails), "Name:"+username+"")
-		WebUI.verifyElementText(findTestObject(verifyEmailDetails), "Email:"+email+"")
-		WebUI.verifyElementText(findTestObject(verifyCurrentAddress), "Current Address :"+cadd+"")
-		WebUI.verifyElementText(findTestObject(verifyPermanentAddress), "Permananet Address :"+padd+"")
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Name_Container'), "Name:"+username+"")
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Email_Container'), "Email:"+email+"")
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Current Address_Container'), "Current Address :"+cadd+"")
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/p_Permananet Address_Container'), "Permananet Address :"+padd+"")
 	}
 
 	@Keyword
@@ -67,43 +58,36 @@ public class ElementsCustomKeywords {
 
 	@Keyword
 	def validateResultFromCheckboxes(String com, v, classif, gen, ex) {
-		String verifyCommands = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultCommands_container'
-		String verifyVeu = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultVeu_container'
-		String verifyClassified = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultClassified_container'
-		String verifyGeneral = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultGeneral_container'
-		String verifyExcel = 'Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultExcel_container'
-
-		WebUI.verifyElementText(findTestObject(verifyCommands), com)
-		WebUI.verifyElementText(findTestObject(verifyVeu), v)
-		WebUI.verifyElementText(findTestObject(verifyClassified), classif)
-		WebUI.verifyElementText(findTestObject(verifyGeneral), gen)
-		WebUI.verifyElementText(findTestObject(verifyExcel), ex)
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultCommands_container'), com)
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultVeu_container'), v)
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultClassified_container'), classif)
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultGeneral_container'), gen)
+		WebUI.verifyElementText(findTestObject('Object Repository/Elements_Test2_objects/Page_ToolsQA/SelectedCheckboxesResultExcel_container'), ex)
 	}
 
 	@Keyword
 	def updateAndValidateAldenRecord(String lastName,age,salary) {
-		KeywordLogger log = new KeywordLogger()
 		//Get old records for comparison
-		String oldLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
-		String oldAge = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
-		String oldSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
+		String oldLastName = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
+		String oldAge = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
+		String oldSalary = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
 
 		//Edit/input updated details
 		WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/edit_Pencil_Icon'))
-		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'))
-		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), lastName)
-		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'))
-		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), age)
-		WebUI.clearText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'))
-		WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), salary)
+		WebUI.clearText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'))
+		WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), lastName)
+		WebUI.clearText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/age_Input_Field'))
+		WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), age)
+		WebUI.clearText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'))
+		WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), salary)
 
 		//Submit updated details
-		WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
+		WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/submit_Button'))
 
 		//Validation/comparison of updated details
-		String newLastName = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
-		String newAge = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
-		String newSalary = WebUI.getText(findTestObject('Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
+		String newLastName = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_LastName_Record'))
+		String newAge = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_Age_Record'))
+		String newSalary = WebUI.getText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/alden_Salary_Record'))
 
 		if(oldLastName != newLastName && oldAge != newAge && oldSalary != newSalary) {
 			log.logInfo("Updated details successfully!")
@@ -120,23 +104,20 @@ public class ElementsCustomKeywords {
 
 			WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/add_NewRecord_Button'))
 
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/firstname_Input_Field'), randomString)
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), randomString)
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/email_Input_Field'), randomString + "@gmail.com")
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), "20")
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), "20000")
-			WebUI.setText(findTestObject('Elements_Test3_objects/Page_ToolsQA/department_Input_Field'), "Science" + randomString)
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/firstname_Input_Field'), randomString)
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/lastname_Input_Field'), randomString)
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/email_Input_Field'), randomString + "@gmail.com")
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/age_Input_Field'), "20")
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/salary_Input_Field'), "20000")
+			WebUI.setText(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/department_Input_Field'), "Science" + randomString)
 
-			WebUI.click(findTestObject('Elements_Test3_objects/Page_ToolsQA/submit_Button'))
-
+			WebUI.click(findTestObject('Object Repository/Elements_Test3_objects/Page_ToolsQA/submit_Button'))
 		}
-
 	}
 
 	@Keyword
 	def verifyResponseCodes(String x) {
-		KeywordLogger log = new KeywordLogger()
-		Thread.sleep(3000)
+		WebUI.delay(3)
 
 		String response = WebUI.getText(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/link_Response_Container'))
 
@@ -195,7 +176,7 @@ public class ElementsCustomKeywords {
 
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
-
 	}
 
 }
+

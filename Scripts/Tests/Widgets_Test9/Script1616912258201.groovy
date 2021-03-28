@@ -17,15 +17,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewWidgetsScreen'()
 
 WebUI.scrollToPosition(0, 500)
 
-WebUI.click(findTestObject('Widgets_Test9/Page_ToolsQA/slider_Menu_Button'))
+WebUI.click(findTestObject('Object Repository/Widgets_Test9/Page_ToolsQA/slider_Menu_Button'))
 
-//the parameter here is set to 65 since the slider is already in 25 by default, thus adding them bothup to 90
+//the parameter here is set to 65 since the slider is already in 25 by default, thus adding them both up to 90
 CustomKeywords.'sample.custom.keywords.WidgetsCustomKeywords.moveSlider'(65)
 
 WebUI.closeBrowser()
+

@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
@@ -30,3 +31,4 @@ CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.uploadFile'()
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.downloadFile'()
 	
 WebUI.closeBrowser()
+

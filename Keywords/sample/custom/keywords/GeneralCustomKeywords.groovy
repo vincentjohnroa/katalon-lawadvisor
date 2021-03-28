@@ -50,19 +50,19 @@ class GeneralCustomKeywords {
 	@Keyword
 	def viewElementsScreen() {
 		WebUI.scrollToPosition(0, 300)
-		WebUI.click(findTestObject('Elements_Test1_objects/Page_ToolsQA/Elements_button'))
+		WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/Elements_button'))
 	}
 
 	@Keyword
 	def viewFormsScreen() {
 		WebUI.scrollToPosition(0, 300)
-		WebUI.click(findTestObject('Forms_Test6_objects/Page_ToolsQA/Forms_button'))
+		WebUI.click(findTestObject('Object Repository/Forms_Test6_objects/Page_ToolsQA/Forms_button'))
 	}
 
 	@Keyword
 	def viewAlertsFrameWindowsScreen() {
 		WebUI.scrollToPosition(0, 300)
-		WebUI.click(findTestObject('AFW_Test7_objects/Page_ToolsQA/AFW_button'))
+		WebUI.click(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/AFW_button'))
 	}
 
 	@Keyword

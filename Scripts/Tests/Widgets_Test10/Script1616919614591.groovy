@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewWidgetsScreen'()
@@ -32,3 +33,4 @@ CustomKeywords.'sample.custom.keywords.WidgetsCustomKeywords.selectMenu'(
 	"Blue")
 
 WebUI.closeBrowser()
+

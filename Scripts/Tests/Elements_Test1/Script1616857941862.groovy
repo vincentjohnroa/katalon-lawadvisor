@@ -21,19 +21,23 @@ CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewElementsScreen'()
 
-WebUI.click(findTestObject('Elements_Test1_objects/Page_ToolsQA/TextBox_button'))
+WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/TextBox_button'))
 
-//Submit details
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.inputDetails'('Vincent John Roa', 'abc@gmail.com', 'sjdm bulacan', 
-    'sjdm bulacan')
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.submitDetails'(
+	"Vincent John Roa",
+	"abc@gmail.com",
+	"sjdm bulacan", 
+    "sjdm bulacan")
 
 WebUI.scrollToPosition(0, 500)
 
 WebUI.click(findTestObject('Object Repository/Elements_Test1_objects/Page_ToolsQA/button_Submit'))
 
-//Validations of submitted details
-CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.validateSubmittedDetails'('Vincent John Roa', 'abc@gmail.com', 
-    'sjdm bulacan', 'sjdm bulacan')
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.validateSubmittedDetails'(
+	"Vincent John Roa",
+	"abc@gmail.com", 
+    "sjdm bulacan",
+	"sjdm bulacan")
 
 WebUI.closeBrowser()
 
