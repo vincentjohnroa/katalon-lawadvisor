@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>monthpicker_Select</name>
+   <name>monthWidgetsPicker_Dropdown</name>
    <tag></tag>
-   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
+   <elementGuidId>a848e08b-03c0-4bae-92fb-8c7f94e26818</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>select.react-datepicker__month-select
-
-</value>
+         <value>.react-datepicker__month-read-view</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

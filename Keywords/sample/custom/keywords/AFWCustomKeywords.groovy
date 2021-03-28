@@ -26,7 +26,7 @@ import internal.GlobalVariable
 
 public class AFWCustomKeywords {
 	KeywordLogger log = new KeywordLogger()
-	
+
 	@Keyword
 	def openNewTabAndValidate(String assertUrl, assertTitle) {
 		WebUI.click(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/newTab_Button'))
@@ -38,39 +38,38 @@ public class AFWCustomKeywords {
 		} else {
 			KeywordUtil.markFailed("Incorrect url assertion!" + url)
 		}
-		
+
 		WebUI.verifyElementText(findTestObject('AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
-		
+
 		WebUI.closeWindowIndex(1)
 	}
-	
+
 	@Keyword
 	def openNewWindowAndValidate(String assertUrl, assertTitle) {
 		WebUI.switchToWindowIndex(0)
 		WebUI.click(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/newWindow_Button'))
-		
+
 		WebUI.switchToWindowIndex(1)
 		String url = WebUI.getUrl()
-		
+
 		if(url == assertUrl) {
 			log.logInfo("URL is correct!")
 		} else {
 			KeywordUtil.markFailed("Incorrect url assertion!" + url)
 		}
-		
+
 		WebUI.verifyElementText(findTestObject('AFW_Test7_objects/Page_ToolsQA/newTabWindow_Page'), assertTitle)
 		WebUI.closeWindowIndex(1)
 	}
-	
+
 	@Keyword
 	def openNewWindowMessageAndValidatePresentWindow() {
 		WebUI.switchToWindowIndex(0)
 		WebUI.click(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/newWindowMessage_Button'))
 		WebUI.closeWindowIndex(0)
 		WebUI.delay(3)
-		
+
 		WebUI.switchToWindowIndex(0)
 	}
-	
 }
 

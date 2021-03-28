@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>monthpicker_Select</name>
+   <name>homeNewTab_Link</name>
    <tag></tag>
-   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
+   <elementGuidId>b1a18d85-46c2-4c7f-855d-138e3b5d88bf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>CSS</key>
+         <value>#simpleLink</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>select.react-datepicker__month-select
-
-</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

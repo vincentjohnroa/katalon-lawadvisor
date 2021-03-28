@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>monthpicker_Select</name>
+   <name>dayPickerWidgets_Select</name>
    <tag></tag>
-   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
+   <elementGuidId>52e5dc0a-b978-4d38-a4f5-309cc3a78385</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>select.react-datepicker__month-select
-
+         <value>.react-datepicker__day.react-datepicker__day--021
 </value>
       </entry>
    </selectorCollection>

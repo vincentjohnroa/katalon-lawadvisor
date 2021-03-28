@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>monthpicker_Select</name>
+   <name>yearDownSelect_Button</name>
    <tag></tag>
-   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
+   <elementGuidId>933f9ce1-f665-41fc-a931-1db64ad3d403</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>select.react-datepicker__month-select
-
-</value>
+         <value>#dateAndTimePicker div.react-datepicker__year-dropdown > div:nth-child(13)</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

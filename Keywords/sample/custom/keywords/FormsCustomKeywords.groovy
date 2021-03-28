@@ -62,7 +62,7 @@ public class FormsCustomKeywords {
 		String verifyNumInfo = 'Object Repository/Forms_Test6_objects/Page_ToolsQA/number_Info'
 		String verifyDobInfo = 'Object Repository/Forms_Test6_objects/Page_ToolsQA/dob_Info'
 		String verifyPicInfo = 'Object Repository/Forms_Test6_objects/Page_ToolsQA/pic_Info'
-		
+
 		findTestObject('Object Repository/Forms_Test6_objects/Page_ToolsQA/studName_Info')
 
 		WebUI.verifyElementText(findTestObject(verifyStudnameInfo), name)

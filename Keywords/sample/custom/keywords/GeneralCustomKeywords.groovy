@@ -64,11 +64,11 @@ class GeneralCustomKeywords {
 		WebUI.scrollToPosition(0, 300)
 		WebUI.click(findTestObject('AFW_Test7_objects/Page_ToolsQA/AFW_button'))
 	}
+
+	@Keyword
+	def viewWidgetsScreen() {
+		WebUI.scrollToPosition(0, 300)
+		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/Widgets_button'))
+	}
 }
-
-
-
-
-
-
 

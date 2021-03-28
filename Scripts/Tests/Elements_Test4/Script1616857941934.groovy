@@ -27,6 +27,10 @@ WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQ
 
 WebUI.scrollToPosition(0, 200)
 
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.clickHomeVerifyResponse'(200)
+
+CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.clickHomeHomeFO6yoVerifyResponse'(200)
+
 WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/created_API_Link'))
 CustomKeywords.'sample.custom.keywords.ElementsCustomKeywords.verifyResponseCodes'("201")
 

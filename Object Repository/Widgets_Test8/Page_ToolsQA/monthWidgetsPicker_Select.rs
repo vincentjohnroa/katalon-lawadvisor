@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>monthpicker_Select</name>
+   <name>monthWidgetsPicker_Select</name>
    <tag></tag>
-   <elementGuidId>2cd58a7c-faac-4901-8397-b3dc014cb0c8</elementGuidId>
+   <elementGuidId>11cd38ee-0e7a-423b-879a-218c2d0d2562</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>select.react-datepicker__month-select
-
-</value>
+         <value>#dateAndTimePicker div.react-datepicker__month-dropdown > div:nth-child(10)</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>
