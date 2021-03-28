@@ -17,24 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import com.kms.katalon.core.webui.common.WebUiCommonHelper
+import org.openqa.selenium.WebElement
+
 CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.openDemoQa'()
 
-CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewFormsScreen'()
+CustomKeywords.'sample.custom.keywords.GeneralCustomKeywords.viewAlertsFrameWindowsScreen'()
 
-WebUI.click(findTestObject('Object Repository/Forms_Test6_objects/Page_ToolsQA/practiceForm_Button'))
+WebUI.scrollToPosition(0,200)
 
-CustomKeywords.'sample.custom.keywords.FormsCustomKeywords.inputDetailsPracticeForm'(
-	"Matt", 
-	"Nguyen", 
-	"mn@gmail.com", 
-	"0987654321",)
+WebUI.click(findTestObject('Object Repository/AFW_Test7_objects/Page_ToolsQA/browser_Windows_Button'))
 
-CustomKeywords.'sample.custom.keywords.FormsCustomKeywords.validateSubmittedDetailsInForm'(
-	"Matt Nguyen",
-	"mn@gmail.com",
-	"Other",
-	"0987654321",
-	"12 August,1985",
-	"sampleFile.jpg")
+CustomKeywords.'sample.custom.keywords.AFWCustomKeywords.openNewTabAndValidate'(
+	"https://demoqa.com/sample",
+	"This is a sample page")
+
+CustomKeywords.'sample.custom.keywords.AFWCustomKeywords.openNewWindowAndValidate'(
+	"https://demoqa.com/sample",
+	"This is a sample page")
+
+CustomKeywords.'sample.custom.keywords.AFWCustomKeywords.openNewWindowMessageAndValidatePresentWindow'()
 
 WebUI.closeBrowser()

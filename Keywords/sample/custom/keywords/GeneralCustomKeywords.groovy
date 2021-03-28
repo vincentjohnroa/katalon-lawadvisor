@@ -56,7 +56,19 @@ class GeneralCustomKeywords {
 	@Keyword
 	def viewFormsScreen() {
 		WebUI.scrollToPosition(0, 300)
-		WebUI.click(findTestObject('Object Repository/Elements_Test6_objects/Page_ToolsQA/Forms_button'))
-		WebUI.navigateToUrl('https://demoqa.com/automation-practice-form')
+		WebUI.click(findTestObject('Forms_Test6_objects/Page_ToolsQA/Forms_button'))
+	}
+
+	@Keyword
+	def viewAlertsFrameWindowsScreen() {
+		WebUI.scrollToPosition(0, 300)
+		WebUI.click(findTestObject('AFW_Test7_objects/Page_ToolsQA/AFW_button'))
 	}
 }
+
+
+
+
+
+
+
