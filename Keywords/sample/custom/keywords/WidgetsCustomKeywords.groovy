@@ -18,11 +18,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import java.awt.Robot as Robot
+import java.awt.event.KeyEvent as KeyEvent
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.Keys as Keys
 
 import internal.GlobalVariable
 
 public class WidgetsCustomKeywords {
-	
+
 	@Keyword
 	def widgetsDatePicker() {
 		Robot rb = new Robot()
@@ -30,22 +36,31 @@ public class WidgetsCustomKeywords {
 		WebUI.selectOptionByValue(findTestObject('Forms_Test6_objects/Page_ToolsQA/monthpicker_Select'), "9", false)
 		WebUI.selectOptionByValue(findTestObject('Forms_Test6_objects/Page_ToolsQA/yearpicker_Select'), "1991", false)
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/dayPickerWidgets_Select'))
-		
+
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/dateAndTimePicker_Input'))
-		
+
 		WebUI.click(findTestObject('Widgets_Test8/Page_ToolsQA/monthWidgetsPicker_Dropdown'))
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/monthWidgetsPicker_Select'))
 
 		WebUI.click(findTestObject('Widgets_Test8/Page_ToolsQA/yearWidgetsPicker_Dropdown'))
-		
+
 		for (int i = 0; i < 30; i++) {
 			WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/yearDownSelect_Button'))
 		}
-		
+
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/yearWidgetsPicker_Select'))
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/datDayWidgetsPicker_Select'))
 
 		WebUI.click(findTestObject('Object Repository/Widgets_Test8/Page_ToolsQA/timeWidgetsPicker_Select'))
+	}
 
+	@Keyword
+	def moveSlider(int val){
+		WebDriver driver = DriverFactory.getWebDriver()
+		WebElement slider = driver.findElement(By.xpath("//input[@type='range']"));
+		
+		for(int i=1; i<=val; i++) {
+			slider.sendKeys(Keys.ARROW_RIGHT);
+		}
 	}
 }

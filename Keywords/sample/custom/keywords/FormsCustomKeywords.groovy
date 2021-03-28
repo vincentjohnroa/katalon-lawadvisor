@@ -19,9 +19,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import org.openqa.selenium.Keys as Keys
 import java.awt.Robot as Robot
-
 import java.awt.event.KeyEvent as KeyEvent
-
 import internal.GlobalVariable
 
 public class FormsCustomKeywords {

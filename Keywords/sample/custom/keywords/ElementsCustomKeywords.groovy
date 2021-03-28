@@ -163,39 +163,39 @@ public class ElementsCustomKeywords {
 	@Keyword
 	def clickHomeVerifyResponse(int rcode) {
 		String requestMethod = "GET"
-		
+
 		WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/homeNewTab_Link'))
 		WebUI.switchToWindowIndex(1)
 		String url = WebUI.getUrl()
-		
+
 		RequestObject ro = new RequestObject()
 		ro.setRestUrl(url)
 		ro.setRestRequestMethod(requestMethod)
-		
+
 		ResponseObject respObj = WS.sendRequest(ro)
 		WS.verifyResponseStatusCode(respObj, rcode)
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 	}
-	
+
 	@Keyword
 	def clickHomeHomeFO6yoVerifyResponse(int rcode) {
 		String requestMethod = "GET"
-		
+
 		WebUI.click(findTestObject('Object Repository/Elements_Test4_objects/Page_ToolsQA/homeFNewTab_Link'))
 		WebUI.switchToWindowIndex(1)
 		String url = WebUI.getUrl()
-		
+
 		RequestObject ro = new RequestObject()
 		ro.setRestUrl(url)
 		ro.setRestRequestMethod(requestMethod)
-		
+
 		ResponseObject respObj = WS.sendRequest(ro)
 		WS.verifyResponseStatusCode(respObj, rcode)
-		
+
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
-		
+
 	}
 
 }
